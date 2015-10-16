@@ -1,0 +1,798 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D339B5EB73EC78AF0886E08 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 345D8E4308A2D73C4D8A4DCA /* libPods.a */; };
+		99DC58351BD034E1007209C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58341BD034E1007209C9 /* AppDelegate.swift */; };
+		99DC58371BD034E1007209C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58361BD034E1007209C9 /* ViewController.swift */; };
+		99DC583A1BD034E1007209C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99DC58381BD034E1007209C9 /* Main.storyboard */; };
+		99DC583C1BD034E1007209C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99DC583B1BD034E1007209C9 /* Assets.xcassets */; };
+		99DC583F1BD034E1007209C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99DC583D1BD034E1007209C9 /* LaunchScreen.storyboard */; };
+		99DC584A1BD034E1007209C9 /* The_BestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58491BD034E1007209C9 /* The_BestTests.swift */; };
+		99DC58551BD034E1007209C9 /* The_BestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58541BD034E1007209C9 /* The_BestUITests.swift */; };
+		99DC58661BD03514007209C9 /* Kickflip.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58651BD03514007209C9 /* Kickflip.m */; };
+		99DC58731BD03526007209C9 /* KFAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58681BD03526007209C9 /* KFAPIClient.m */; };
+		99DC58741BD03526007209C9 /* KFPaginationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC586A1BD03526007209C9 /* KFPaginationInfo.m */; };
+		99DC58751BD03526007209C9 /* KFRTMPStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC586C1BD03526007209C9 /* KFRTMPStream.m */; };
+		99DC58761BD03526007209C9 /* KFS3Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC586E1BD03526007209C9 /* KFS3Stream.m */; };
+		99DC58771BD03526007209C9 /* KFStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58701BD03526007209C9 /* KFStream.m */; };
+		99DC58781BD03526007209C9 /* KFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58721BD03526007209C9 /* KFUser.m */; };
+		99DC587D1BD03530007209C9 /* KFEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC587A1BD03530007209C9 /* KFEncoder.m */; };
+		99DC587E1BD03530007209C9 /* KFFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC587C1BD03530007209C9 /* KFFrame.m */; };
+		99DC58811BD03537007209C9 /* KFAudioEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58801BD03537007209C9 /* KFAudioEncoder.m */; };
+		99DC58841BD0353E007209C9 /* KFAACEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58831BD0353E007209C9 /* KFAACEncoder.m */; };
+		99DC58891BD03548007209C9 /* KFVideoEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58861BD03548007209C9 /* KFVideoEncoder.m */; };
+		99DC588A1BD03548007209C9 /* KFVideoFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58881BD03548007209C9 /* KFVideoFrame.m */; };
+		99DC58961BD03550007209C9 /* AVEncoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99DC588C1BD03550007209C9 /* AVEncoder.mm */; };
+		99DC58971BD03550007209C9 /* KFH264Encoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99DC588E1BD03550007209C9 /* KFH264Encoder.mm */; };
+		99DC58981BD03550007209C9 /* LICENSE.markdown in Sources */ = {isa = PBXBuildFile; fileRef = 99DC588F1BD03550007209C9 /* LICENSE.markdown */; };
+		99DC58991BD03550007209C9 /* MP4Atom.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58911BD03550007209C9 /* MP4Atom.m */; };
+		99DC589A1BD03550007209C9 /* NALUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58921BD03550007209C9 /* NALUnit.cpp */; };
+		99DC589B1BD03550007209C9 /* VideoEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58951BD03550007209C9 /* VideoEncoder.m */; };
+		99DC589E1BD03563007209C9 /* KFRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC589D1BD03563007209C9 /* KFRecorder.m */; };
+		99DC58A91BD0356F007209C9 /* KFDirectoryWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58A01BD0356F007209C9 /* KFDirectoryWatcher.m */; };
+		99DC58AA1BD0356F007209C9 /* KFHLSManifestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58A21BD0356F007209C9 /* KFHLSManifestGenerator.m */; };
+		99DC58AB1BD0356F007209C9 /* KFHLSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58A41BD0356F007209C9 /* KFHLSMonitor.m */; };
+		99DC58AC1BD0356F007209C9 /* KFHLSUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58A61BD0356F007209C9 /* KFHLSUploader.m */; };
+		99DC58AD1BD0356F007209C9 /* KFHLSWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58A81BD0356F007209C9 /* KFHLSWriter.m */; };
+		99DC58B51BD0357B007209C9 /* KFCameraReverse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99DC58AE1BD0357B007209C9 /* KFCameraReverse@2x.png */; };
+		99DC58B61BD0357B007209C9 /* KFCameraReversePressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99DC58AF1BD0357B007209C9 /* KFCameraReversePressed@2x.png */; };
+		99DC58B71BD0357B007209C9 /* KFDeviceRotation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99DC58B01BD0357B007209C9 /* KFDeviceRotation@2x.png */; };
+		99DC58B81BD0357B007209C9 /* KFRecordButtonBorder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99DC58B11BD0357B007209C9 /* KFRecordButtonBorder@2x.png */; };
+		99DC58B91BD0357B007209C9 /* KFRecordButtonStart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99DC58B21BD0357B007209C9 /* KFRecordButtonStart@2x.png */; };
+		99DC58BA1BD0357B007209C9 /* KFRecordButtonStop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99DC58B31BD0357B007209C9 /* KFRecordButtonStop@2x.png */; };
+		99DC58BB1BD0357B007209C9 /* KFStreamTableViewCellDots@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99DC58B41BD0357B007209C9 /* KFStreamTableViewCellDots@2x.png */; };
+		99DC58C11BD03585007209C9 /* KFAWSCredentialsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58BD1BD03585007209C9 /* KFAWSCredentialsProvider.m */; };
+		99DC58C21BD03585007209C9 /* KFDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58BF1BD03585007209C9 /* KFDateUtils.m */; };
+		99DC58CB1BD0358F007209C9 /* KFBroadcastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58C41BD0358F007209C9 /* KFBroadcastViewController.m */; };
+		99DC58CC1BD0358F007209C9 /* KFLiveBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58C61BD0358F007209C9 /* KFLiveBannerView.m */; };
+		99DC58CD1BD0358F007209C9 /* KFRecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58C81BD0358F007209C9 /* KFRecordButton.m */; };
+		99DC58CE1BD0358F007209C9 /* KFStreamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DC58CA1BD0358F007209C9 /* KFStreamTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		99DC58461BD034E1007209C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99DC58291BD034E1007209C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99DC58301BD034E1007209C9;
+			remoteInfo = "The Best";
+		};
+		99DC58511BD034E1007209C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99DC58291BD034E1007209C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99DC58301BD034E1007209C9;
+			remoteInfo = "The Best";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D8636A02E198EA8964684DB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		345D8E4308A2D73C4D8A4DCA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C378ABFA97B95715B69CCB0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		99DC58311BD034E1007209C9 /* The Best.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Best.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99DC58341BD034E1007209C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		99DC58361BD034E1007209C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99DC58391BD034E1007209C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		99DC583B1BD034E1007209C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99DC583E1BD034E1007209C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		99DC58401BD034E1007209C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99DC58451BD034E1007209C9 /* The BestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The BestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99DC58491BD034E1007209C9 /* The_BestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_BestTests.swift; sourceTree = "<group>"; };
+		99DC584B1BD034E1007209C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99DC58501BD034E1007209C9 /* The BestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The BestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99DC58541BD034E1007209C9 /* The_BestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_BestUITests.swift; sourceTree = "<group>"; };
+		99DC58561BD034E1007209C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99DC58621BD03513007209C9 /* The Best-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "The Best-Bridging-Header.h"; sourceTree = "<group>"; };
+		99DC58631BD03514007209C9 /* Kickflip-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Kickflip-Prefix.pch"; sourceTree = "<group>"; };
+		99DC58641BD03514007209C9 /* Kickflip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kickflip.h; sourceTree = "<group>"; };
+		99DC58651BD03514007209C9 /* Kickflip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Kickflip.m; sourceTree = "<group>"; };
+		99DC58671BD03526007209C9 /* KFAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFAPIClient.h; sourceTree = "<group>"; };
+		99DC58681BD03526007209C9 /* KFAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFAPIClient.m; sourceTree = "<group>"; };
+		99DC58691BD03526007209C9 /* KFPaginationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFPaginationInfo.h; sourceTree = "<group>"; };
+		99DC586A1BD03526007209C9 /* KFPaginationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFPaginationInfo.m; sourceTree = "<group>"; };
+		99DC586B1BD03526007209C9 /* KFRTMPStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFRTMPStream.h; sourceTree = "<group>"; };
+		99DC586C1BD03526007209C9 /* KFRTMPStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFRTMPStream.m; sourceTree = "<group>"; };
+		99DC586D1BD03526007209C9 /* KFS3Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFS3Stream.h; sourceTree = "<group>"; };
+		99DC586E1BD03526007209C9 /* KFS3Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFS3Stream.m; sourceTree = "<group>"; };
+		99DC586F1BD03526007209C9 /* KFStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFStream.h; sourceTree = "<group>"; };
+		99DC58701BD03526007209C9 /* KFStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFStream.m; sourceTree = "<group>"; };
+		99DC58711BD03526007209C9 /* KFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFUser.h; sourceTree = "<group>"; };
+		99DC58721BD03526007209C9 /* KFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFUser.m; sourceTree = "<group>"; };
+		99DC58791BD03530007209C9 /* KFEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFEncoder.h; sourceTree = "<group>"; };
+		99DC587A1BD03530007209C9 /* KFEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFEncoder.m; sourceTree = "<group>"; };
+		99DC587B1BD03530007209C9 /* KFFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFFrame.h; sourceTree = "<group>"; };
+		99DC587C1BD03530007209C9 /* KFFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFFrame.m; sourceTree = "<group>"; };
+		99DC587F1BD03537007209C9 /* KFAudioEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFAudioEncoder.h; sourceTree = "<group>"; };
+		99DC58801BD03537007209C9 /* KFAudioEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFAudioEncoder.m; sourceTree = "<group>"; };
+		99DC58821BD0353E007209C9 /* KFAACEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFAACEncoder.h; sourceTree = "<group>"; };
+		99DC58831BD0353E007209C9 /* KFAACEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFAACEncoder.m; sourceTree = "<group>"; };
+		99DC58851BD03548007209C9 /* KFVideoEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFVideoEncoder.h; sourceTree = "<group>"; };
+		99DC58861BD03548007209C9 /* KFVideoEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFVideoEncoder.m; sourceTree = "<group>"; };
+		99DC58871BD03548007209C9 /* KFVideoFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFVideoFrame.h; sourceTree = "<group>"; };
+		99DC58881BD03548007209C9 /* KFVideoFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFVideoFrame.m; sourceTree = "<group>"; };
+		99DC588B1BD03550007209C9 /* AVEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVEncoder.h; sourceTree = "<group>"; };
+		99DC588C1BD03550007209C9 /* AVEncoder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AVEncoder.mm; sourceTree = "<group>"; };
+		99DC588D1BD03550007209C9 /* KFH264Encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFH264Encoder.h; sourceTree = "<group>"; };
+		99DC588E1BD03550007209C9 /* KFH264Encoder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KFH264Encoder.mm; sourceTree = "<group>"; };
+		99DC588F1BD03550007209C9 /* LICENSE.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.markdown; sourceTree = "<group>"; };
+		99DC58901BD03550007209C9 /* MP4Atom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4Atom.h; sourceTree = "<group>"; };
+		99DC58911BD03550007209C9 /* MP4Atom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MP4Atom.m; sourceTree = "<group>"; };
+		99DC58921BD03550007209C9 /* NALUnit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NALUnit.cpp; sourceTree = "<group>"; };
+		99DC58931BD03550007209C9 /* NALUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NALUnit.h; sourceTree = "<group>"; };
+		99DC58941BD03550007209C9 /* VideoEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoEncoder.h; sourceTree = "<group>"; };
+		99DC58951BD03550007209C9 /* VideoEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoEncoder.m; sourceTree = "<group>"; };
+		99DC589C1BD03563007209C9 /* KFRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFRecorder.h; sourceTree = "<group>"; };
+		99DC589D1BD03563007209C9 /* KFRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFRecorder.m; sourceTree = "<group>"; };
+		99DC589F1BD0356F007209C9 /* KFDirectoryWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFDirectoryWatcher.h; sourceTree = "<group>"; };
+		99DC58A01BD0356F007209C9 /* KFDirectoryWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFDirectoryWatcher.m; sourceTree = "<group>"; };
+		99DC58A11BD0356F007209C9 /* KFHLSManifestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFHLSManifestGenerator.h; sourceTree = "<group>"; };
+		99DC58A21BD0356F007209C9 /* KFHLSManifestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFHLSManifestGenerator.m; sourceTree = "<group>"; };
+		99DC58A31BD0356F007209C9 /* KFHLSMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFHLSMonitor.h; sourceTree = "<group>"; };
+		99DC58A41BD0356F007209C9 /* KFHLSMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFHLSMonitor.m; sourceTree = "<group>"; };
+		99DC58A51BD0356F007209C9 /* KFHLSUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFHLSUploader.h; sourceTree = "<group>"; };
+		99DC58A61BD0356F007209C9 /* KFHLSUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFHLSUploader.m; sourceTree = "<group>"; };
+		99DC58A71BD0356F007209C9 /* KFHLSWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFHLSWriter.h; sourceTree = "<group>"; };
+		99DC58A81BD0356F007209C9 /* KFHLSWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFHLSWriter.m; sourceTree = "<group>"; };
+		99DC58AE1BD0357B007209C9 /* KFCameraReverse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KFCameraReverse@2x.png"; sourceTree = "<group>"; };
+		99DC58AF1BD0357B007209C9 /* KFCameraReversePressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KFCameraReversePressed@2x.png"; sourceTree = "<group>"; };
+		99DC58B01BD0357B007209C9 /* KFDeviceRotation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KFDeviceRotation@2x.png"; sourceTree = "<group>"; };
+		99DC58B11BD0357B007209C9 /* KFRecordButtonBorder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KFRecordButtonBorder@2x.png"; sourceTree = "<group>"; };
+		99DC58B21BD0357B007209C9 /* KFRecordButtonStart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KFRecordButtonStart@2x.png"; sourceTree = "<group>"; };
+		99DC58B31BD0357B007209C9 /* KFRecordButtonStop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KFRecordButtonStop@2x.png"; sourceTree = "<group>"; };
+		99DC58B41BD0357B007209C9 /* KFStreamTableViewCellDots@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KFStreamTableViewCellDots@2x.png"; sourceTree = "<group>"; };
+		99DC58BC1BD03585007209C9 /* KFAWSCredentialsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFAWSCredentialsProvider.h; sourceTree = "<group>"; };
+		99DC58BD1BD03585007209C9 /* KFAWSCredentialsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFAWSCredentialsProvider.m; sourceTree = "<group>"; };
+		99DC58BE1BD03585007209C9 /* KFDateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFDateUtils.h; sourceTree = "<group>"; };
+		99DC58BF1BD03585007209C9 /* KFDateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFDateUtils.m; sourceTree = "<group>"; };
+		99DC58C01BD03585007209C9 /* KFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFLog.h; sourceTree = "<group>"; };
+		99DC58C31BD0358F007209C9 /* KFBroadcastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFBroadcastViewController.h; sourceTree = "<group>"; };
+		99DC58C41BD0358F007209C9 /* KFBroadcastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFBroadcastViewController.m; sourceTree = "<group>"; };
+		99DC58C51BD0358F007209C9 /* KFLiveBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFLiveBannerView.h; sourceTree = "<group>"; };
+		99DC58C61BD0358F007209C9 /* KFLiveBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFLiveBannerView.m; sourceTree = "<group>"; };
+		99DC58C71BD0358F007209C9 /* KFRecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFRecordButton.h; sourceTree = "<group>"; };
+		99DC58C81BD0358F007209C9 /* KFRecordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFRecordButton.m; sourceTree = "<group>"; };
+		99DC58C91BD0358F007209C9 /* KFStreamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFStreamTableViewCell.h; sourceTree = "<group>"; };
+		99DC58CA1BD0358F007209C9 /* KFStreamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFStreamTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99DC582E1BD034E1007209C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D339B5EB73EC78AF0886E08 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99DC58421BD034E1007209C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99DC584D1BD034E1007209C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76F1D63F57ECA910931341B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				345D8E4308A2D73C4D8A4DCA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99DC58281BD034E1007209C9 = {
+			isa = PBXGroup;
+			children = (
+				99DC58331BD034E1007209C9 /* The Best */,
+				99DC58481BD034E1007209C9 /* The BestTests */,
+				99DC58531BD034E1007209C9 /* The BestUITests */,
+				99DC58321BD034E1007209C9 /* Products */,
+				BC2E20C67D08BFD2C3162196 /* Pods */,
+				76F1D63F57ECA910931341B6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		99DC58321BD034E1007209C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99DC58311BD034E1007209C9 /* The Best.app */,
+				99DC58451BD034E1007209C9 /* The BestTests.xctest */,
+				99DC58501BD034E1007209C9 /* The BestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99DC58331BD034E1007209C9 /* The Best */ = {
+			isa = PBXGroup;
+			children = (
+				99DC58C31BD0358F007209C9 /* KFBroadcastViewController.h */,
+				99DC58C41BD0358F007209C9 /* KFBroadcastViewController.m */,
+				99DC58C51BD0358F007209C9 /* KFLiveBannerView.h */,
+				99DC58C61BD0358F007209C9 /* KFLiveBannerView.m */,
+				99DC58C71BD0358F007209C9 /* KFRecordButton.h */,
+				99DC58C81BD0358F007209C9 /* KFRecordButton.m */,
+				99DC58C91BD0358F007209C9 /* KFStreamTableViewCell.h */,
+				99DC58CA1BD0358F007209C9 /* KFStreamTableViewCell.m */,
+				99DC58BC1BD03585007209C9 /* KFAWSCredentialsProvider.h */,
+				99DC58BD1BD03585007209C9 /* KFAWSCredentialsProvider.m */,
+				99DC58BE1BD03585007209C9 /* KFDateUtils.h */,
+				99DC58BF1BD03585007209C9 /* KFDateUtils.m */,
+				99DC58C01BD03585007209C9 /* KFLog.h */,
+				99DC58AE1BD0357B007209C9 /* KFCameraReverse@2x.png */,
+				99DC58AF1BD0357B007209C9 /* KFCameraReversePressed@2x.png */,
+				99DC58B01BD0357B007209C9 /* KFDeviceRotation@2x.png */,
+				99DC58B11BD0357B007209C9 /* KFRecordButtonBorder@2x.png */,
+				99DC58B21BD0357B007209C9 /* KFRecordButtonStart@2x.png */,
+				99DC58B31BD0357B007209C9 /* KFRecordButtonStop@2x.png */,
+				99DC58B41BD0357B007209C9 /* KFStreamTableViewCellDots@2x.png */,
+				99DC58631BD03514007209C9 /* Kickflip-Prefix.pch */,
+				99DC58641BD03514007209C9 /* Kickflip.h */,
+				99DC58851BD03548007209C9 /* KFVideoEncoder.h */,
+				99DC589C1BD03563007209C9 /* KFRecorder.h */,
+				99DC589D1BD03563007209C9 /* KFRecorder.m */,
+				99DC58861BD03548007209C9 /* KFVideoEncoder.m */,
+				99DC58871BD03548007209C9 /* KFVideoFrame.h */,
+				99DC58881BD03548007209C9 /* KFVideoFrame.m */,
+				99DC58651BD03514007209C9 /* Kickflip.m */,
+				99DC587F1BD03537007209C9 /* KFAudioEncoder.h */,
+				99DC589F1BD0356F007209C9 /* KFDirectoryWatcher.h */,
+				99DC58A01BD0356F007209C9 /* KFDirectoryWatcher.m */,
+				99DC58A11BD0356F007209C9 /* KFHLSManifestGenerator.h */,
+				99DC58A21BD0356F007209C9 /* KFHLSManifestGenerator.m */,
+				99DC58A31BD0356F007209C9 /* KFHLSMonitor.h */,
+				99DC58A41BD0356F007209C9 /* KFHLSMonitor.m */,
+				99DC58A51BD0356F007209C9 /* KFHLSUploader.h */,
+				99DC58A61BD0356F007209C9 /* KFHLSUploader.m */,
+				99DC58A71BD0356F007209C9 /* KFHLSWriter.h */,
+				99DC58A81BD0356F007209C9 /* KFHLSWriter.m */,
+				99DC58801BD03537007209C9 /* KFAudioEncoder.m */,
+				99DC58821BD0353E007209C9 /* KFAACEncoder.h */,
+				99DC588B1BD03550007209C9 /* AVEncoder.h */,
+				99DC588C1BD03550007209C9 /* AVEncoder.mm */,
+				99DC588D1BD03550007209C9 /* KFH264Encoder.h */,
+				99DC588E1BD03550007209C9 /* KFH264Encoder.mm */,
+				99DC588F1BD03550007209C9 /* LICENSE.markdown */,
+				99DC58901BD03550007209C9 /* MP4Atom.h */,
+				99DC58911BD03550007209C9 /* MP4Atom.m */,
+				99DC58921BD03550007209C9 /* NALUnit.cpp */,
+				99DC58931BD03550007209C9 /* NALUnit.h */,
+				99DC58941BD03550007209C9 /* VideoEncoder.h */,
+				99DC58951BD03550007209C9 /* VideoEncoder.m */,
+				99DC58831BD0353E007209C9 /* KFAACEncoder.m */,
+				99DC58791BD03530007209C9 /* KFEncoder.h */,
+				99DC587A1BD03530007209C9 /* KFEncoder.m */,
+				99DC587B1BD03530007209C9 /* KFFrame.h */,
+				99DC587C1BD03530007209C9 /* KFFrame.m */,
+				99DC58671BD03526007209C9 /* KFAPIClient.h */,
+				99DC58681BD03526007209C9 /* KFAPIClient.m */,
+				99DC58691BD03526007209C9 /* KFPaginationInfo.h */,
+				99DC586A1BD03526007209C9 /* KFPaginationInfo.m */,
+				99DC586B1BD03526007209C9 /* KFRTMPStream.h */,
+				99DC586C1BD03526007209C9 /* KFRTMPStream.m */,
+				99DC586D1BD03526007209C9 /* KFS3Stream.h */,
+				99DC586E1BD03526007209C9 /* KFS3Stream.m */,
+				99DC586F1BD03526007209C9 /* KFStream.h */,
+				99DC58701BD03526007209C9 /* KFStream.m */,
+				99DC58711BD03526007209C9 /* KFUser.h */,
+				99DC58721BD03526007209C9 /* KFUser.m */,
+				99DC58341BD034E1007209C9 /* AppDelegate.swift */,
+				99DC58361BD034E1007209C9 /* ViewController.swift */,
+				99DC58381BD034E1007209C9 /* Main.storyboard */,
+				99DC583B1BD034E1007209C9 /* Assets.xcassets */,
+				99DC583D1BD034E1007209C9 /* LaunchScreen.storyboard */,
+				99DC58401BD034E1007209C9 /* Info.plist */,
+				99DC58621BD03513007209C9 /* The Best-Bridging-Header.h */,
+			);
+			path = "The Best";
+			sourceTree = "<group>";
+		};
+		99DC58481BD034E1007209C9 /* The BestTests */ = {
+			isa = PBXGroup;
+			children = (
+				99DC58491BD034E1007209C9 /* The_BestTests.swift */,
+				99DC584B1BD034E1007209C9 /* Info.plist */,
+			);
+			path = "The BestTests";
+			sourceTree = "<group>";
+		};
+		99DC58531BD034E1007209C9 /* The BestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				99DC58541BD034E1007209C9 /* The_BestUITests.swift */,
+				99DC58561BD034E1007209C9 /* Info.plist */,
+			);
+			path = "The BestUITests";
+			sourceTree = "<group>";
+		};
+		BC2E20C67D08BFD2C3162196 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C378ABFA97B95715B69CCB0 /* Pods.debug.xcconfig */,
+				2D8636A02E198EA8964684DB /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		99DC58301BD034E1007209C9 /* The Best */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99DC58591BD034E1007209C9 /* Build configuration list for PBXNativeTarget "The Best" */;
+			buildPhases = (
+				DB8E2672B5810CAC9D023A24 /* Check Pods Manifest.lock */,
+				99DC582D1BD034E1007209C9 /* Sources */,
+				99DC582E1BD034E1007209C9 /* Frameworks */,
+				99DC582F1BD034E1007209C9 /* Resources */,
+				18110F67C05886C371F16169 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "The Best";
+			productName = "The Best";
+			productReference = 99DC58311BD034E1007209C9 /* The Best.app */;
+			productType = "com.apple.product-type.application";
+		};
+		99DC58441BD034E1007209C9 /* The BestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99DC585C1BD034E1007209C9 /* Build configuration list for PBXNativeTarget "The BestTests" */;
+			buildPhases = (
+				99DC58411BD034E1007209C9 /* Sources */,
+				99DC58421BD034E1007209C9 /* Frameworks */,
+				99DC58431BD034E1007209C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99DC58471BD034E1007209C9 /* PBXTargetDependency */,
+			);
+			name = "The BestTests";
+			productName = "The BestTests";
+			productReference = 99DC58451BD034E1007209C9 /* The BestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		99DC584F1BD034E1007209C9 /* The BestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99DC585F1BD034E1007209C9 /* Build configuration list for PBXNativeTarget "The BestUITests" */;
+			buildPhases = (
+				99DC584C1BD034E1007209C9 /* Sources */,
+				99DC584D1BD034E1007209C9 /* Frameworks */,
+				99DC584E1BD034E1007209C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99DC58521BD034E1007209C9 /* PBXTargetDependency */,
+			);
+			name = "The BestUITests";
+			productName = "The BestUITests";
+			productReference = 99DC58501BD034E1007209C9 /* The BestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99DC58291BD034E1007209C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = godseye;
+				TargetAttributes = {
+					99DC58301BD034E1007209C9 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					99DC58441BD034E1007209C9 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 99DC58301BD034E1007209C9;
+					};
+					99DC584F1BD034E1007209C9 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 99DC58301BD034E1007209C9;
+					};
+				};
+			};
+			buildConfigurationList = 99DC582C1BD034E1007209C9 /* Build configuration list for PBXProject "The Best" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 99DC58281BD034E1007209C9;
+			productRefGroup = 99DC58321BD034E1007209C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99DC58301BD034E1007209C9 /* The Best */,
+				99DC58441BD034E1007209C9 /* The BestTests */,
+				99DC584F1BD034E1007209C9 /* The BestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99DC582F1BD034E1007209C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99DC583F1BD034E1007209C9 /* LaunchScreen.storyboard in Resources */,
+				99DC58B91BD0357B007209C9 /* KFRecordButtonStart@2x.png in Resources */,
+				99DC58BB1BD0357B007209C9 /* KFStreamTableViewCellDots@2x.png in Resources */,
+				99DC58B51BD0357B007209C9 /* KFCameraReverse@2x.png in Resources */,
+				99DC583C1BD034E1007209C9 /* Assets.xcassets in Resources */,
+				99DC58B81BD0357B007209C9 /* KFRecordButtonBorder@2x.png in Resources */,
+				99DC58B71BD0357B007209C9 /* KFDeviceRotation@2x.png in Resources */,
+				99DC58B61BD0357B007209C9 /* KFCameraReversePressed@2x.png in Resources */,
+				99DC583A1BD034E1007209C9 /* Main.storyboard in Resources */,
+				99DC58BA1BD0357B007209C9 /* KFRecordButtonStop@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99DC58431BD034E1007209C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99DC584E1BD034E1007209C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18110F67C05886C371F16169 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB8E2672B5810CAC9D023A24 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99DC582D1BD034E1007209C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99DC58971BD03550007209C9 /* KFH264Encoder.mm in Sources */,
+				99DC587E1BD03530007209C9 /* KFFrame.m in Sources */,
+				99DC58C11BD03585007209C9 /* KFAWSCredentialsProvider.m in Sources */,
+				99DC58841BD0353E007209C9 /* KFAACEncoder.m in Sources */,
+				99DC58761BD03526007209C9 /* KFS3Stream.m in Sources */,
+				99DC58AB1BD0356F007209C9 /* KFHLSMonitor.m in Sources */,
+				99DC58371BD034E1007209C9 /* ViewController.swift in Sources */,
+				99DC588A1BD03548007209C9 /* KFVideoFrame.m in Sources */,
+				99DC58771BD03526007209C9 /* KFStream.m in Sources */,
+				99DC58741BD03526007209C9 /* KFPaginationInfo.m in Sources */,
+				99DC58981BD03550007209C9 /* LICENSE.markdown in Sources */,
+				99DC58AD1BD0356F007209C9 /* KFHLSWriter.m in Sources */,
+				99DC58991BD03550007209C9 /* MP4Atom.m in Sources */,
+				99DC58351BD034E1007209C9 /* AppDelegate.swift in Sources */,
+				99DC589A1BD03550007209C9 /* NALUnit.cpp in Sources */,
+				99DC589E1BD03563007209C9 /* KFRecorder.m in Sources */,
+				99DC58CC1BD0358F007209C9 /* KFLiveBannerView.m in Sources */,
+				99DC587D1BD03530007209C9 /* KFEncoder.m in Sources */,
+				99DC58751BD03526007209C9 /* KFRTMPStream.m in Sources */,
+				99DC58731BD03526007209C9 /* KFAPIClient.m in Sources */,
+				99DC58C21BD03585007209C9 /* KFDateUtils.m in Sources */,
+				99DC58961BD03550007209C9 /* AVEncoder.mm in Sources */,
+				99DC58AA1BD0356F007209C9 /* KFHLSManifestGenerator.m in Sources */,
+				99DC58CD1BD0358F007209C9 /* KFRecordButton.m in Sources */,
+				99DC58781BD03526007209C9 /* KFUser.m in Sources */,
+				99DC58A91BD0356F007209C9 /* KFDirectoryWatcher.m in Sources */,
+				99DC58811BD03537007209C9 /* KFAudioEncoder.m in Sources */,
+				99DC58CB1BD0358F007209C9 /* KFBroadcastViewController.m in Sources */,
+				99DC58AC1BD0356F007209C9 /* KFHLSUploader.m in Sources */,
+				99DC58661BD03514007209C9 /* Kickflip.m in Sources */,
+				99DC589B1BD03550007209C9 /* VideoEncoder.m in Sources */,
+				99DC58CE1BD0358F007209C9 /* KFStreamTableViewCell.m in Sources */,
+				99DC58891BD03548007209C9 /* KFVideoEncoder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99DC58411BD034E1007209C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99DC584A1BD034E1007209C9 /* The_BestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99DC584C1BD034E1007209C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99DC58551BD034E1007209C9 /* The_BestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		99DC58471BD034E1007209C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99DC58301BD034E1007209C9 /* The Best */;
+			targetProxy = 99DC58461BD034E1007209C9 /* PBXContainerItemProxy */;
+		};
+		99DC58521BD034E1007209C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99DC58301BD034E1007209C9 /* The Best */;
+			targetProxy = 99DC58511BD034E1007209C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		99DC58381BD034E1007209C9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99DC58391BD034E1007209C9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		99DC583D1BD034E1007209C9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99DC583E1BD034E1007209C9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		99DC58571BD034E1007209C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99DC58581BD034E1007209C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		99DC585A1BD034E1007209C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C378ABFA97B95715B69CCB0 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "The Best/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "godseye.The-Best";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "The Best/The Best-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		99DC585B1BD034E1007209C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D8636A02E198EA8964684DB /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "The Best/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "godseye.The-Best";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "The Best/The Best-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		99DC585D1BD034E1007209C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "The BestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "godseye.The-BestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Best.app/The Best";
+			};
+			name = Debug;
+		};
+		99DC585E1BD034E1007209C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "The BestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "godseye.The-BestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Best.app/The Best";
+			};
+			name = Release;
+		};
+		99DC58601BD034E1007209C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "The BestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "godseye.The-BestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "The Best";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		99DC58611BD034E1007209C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "The BestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "godseye.The-BestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "The Best";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99DC582C1BD034E1007209C9 /* Build configuration list for PBXProject "The Best" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99DC58571BD034E1007209C9 /* Debug */,
+				99DC58581BD034E1007209C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99DC58591BD034E1007209C9 /* Build configuration list for PBXNativeTarget "The Best" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99DC585A1BD034E1007209C9 /* Debug */,
+				99DC585B1BD034E1007209C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99DC585C1BD034E1007209C9 /* Build configuration list for PBXNativeTarget "The BestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99DC585D1BD034E1007209C9 /* Debug */,
+				99DC585E1BD034E1007209C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99DC585F1BD034E1007209C9 /* Build configuration list for PBXNativeTarget "The BestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99DC58601BD034E1007209C9 /* Debug */,
+				99DC58611BD034E1007209C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 99DC58291BD034E1007209C9 /* Project object */;
+}
