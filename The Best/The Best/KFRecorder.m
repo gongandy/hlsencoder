@@ -542,7 +542,8 @@
         }
     }];
     
-    if ([self.stream isKindOfClass:[KFS3Stream class]]) {
+//    if ([self.stream isKindOfClass:[KFS3Stream class]]) {
+    if(true) {
         [[KFHLSMonitor sharedMonitor] finishUploadingContentsAtFolderPath:_hlsWriter.directoryPath endpoint:(KFS3Stream*)self.stream];
     }
     

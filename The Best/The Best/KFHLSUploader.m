@@ -15,6 +15,8 @@
 #import "KFHLSWriter.h"
 #import "KFRecorder.h"
 #import <AWSS3/AWSS3.h>
+#import <AWSCore/AWSCore.h>
+#import <AWSCore/AWSService.h>
 
 static NSString * const kManifestKey =  @"manifest";
 static NSString * const kFileNameKey = @"fileName";
@@ -71,19 +73,15 @@ static NSString * const kKFS3Key = @"kKFS3Key";
         _uploadRateTotal = 0;
         _uploadRateCount = 0;
         
-//        AWSRegionType region = [KFAWSCredentialsProvider regionTypeForRegion:stream.awsRegion];
-//        KFAWSCredentialsProvider *awsCredentialsProvider = [[KFAWSCredentialsProvider alloc] initWithStream:stream];
+    
+        AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc] initWithRegionType:AWSRegionUSEast1 identityPoolId:@"us-east-1:cdb87120-5f38-479d-955c-39cd27f27aac"];
         
-//        AWSCognitoCredentialsProvider *awsCredentialsProvider = [[AWSCognitoCredentialsProvider alloc] initWithRegionType:AWSRegionUSEast1 identityPoolId:@"us-east-1:cdb87120-5f38-479d-955c-39cd27f27aac"];
-//        AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSEast1
-//                                                                             credentialsProvider:awsCredentialsProvider];
-//        
-//        [AWSS3TransferManager registerS3TransferManagerWithConfiguration:configuration forKey:kKFS3TransferManagerKey];
-//        [AWSS3 registerS3WithConfiguration:configuration forKey:kKFS3Key];
+        AWSServiceConfiguration *defaultServiceConfiguration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSWest1 credentialsProvider:credentialsProvider];
+
+        [AWSS3 registerS3WithConfiguration:defaultServiceConfiguration forKey:kKFS3Key];
         
         self.transferManager = [AWSS3TransferManager defaultS3TransferManager];
-        
-//        self.transferManager = [AWSS3TransferManager S3TransferManagerForKey:kKFS3TransferManagerKey];
+
         self.s3 = [AWSS3 S3ForKey:kKFS3Key];
         
         self.manifestGenerator = [[KFHLSManifestGenerator alloc] initWithTargetDuration:kHLSSegmentDurationSeconds playlistType:KFHLSManifestPlaylistTypeVOD];
@@ -135,11 +133,6 @@ static NSString * const kKFS3Key = @"kKFS3Key";
     NSString *filePath = [_directoryPath stringByAppendingPathComponent:fileName];
     NSString *key = [self awsKeyForStream:self.stream fileName:fileName];
     
-    NSLog(@"KEY: %@", key);
-    
-    NSLog(@"UPLOAD TIME");
-    
-    AWSS3TransferManager * transferManager = [AWSS3TransferManager defaultS3TransferManager];
     AWSS3TransferManagerUploadRequest *uploadRequest = [AWSS3TransferManagerUploadRequest new];
 
     uploadRequest.bucket = self.stream.bucketName;
@@ -167,7 +160,7 @@ static NSString * const kKFS3Key = @"kKFS3Key";
             
             
             DDLogVerbose(@"Speed: %f kbps Average Speed: %f bytesSent: %d", kbps, averageUploadSpeed, bytesSent);
-            NSLog(@"Speed: %f kbps Average Speed: %f bytesSent: %d", kbps, averageUploadSpeed, bytesSent);
+//            NSLog(@"Speed: %f kbps Average Speed: %f bytesSent: %d", kbps, averageUploadSpeed, bytesSent);
 
             
             if ([self.delegate respondsToSelector:@selector(uploader:didUploadPartOfASegmentAtUploadSpeed:)]) {
@@ -202,23 +195,24 @@ static NSString * const kKFS3Key = @"kKFS3Key";
     DDLogVerbose(@"New manifest:\n%@", manifestString);
     NSString *key = [self awsKeyForStream:self.stream fileName:manifestName];
     
-    AWSS3PutObjectRequest *uploadRequest = [AWSS3TransferManagerUploadRequest new];
+    AWSS3PutObjectRequest *uploadRequest = [AWSS3PutObjectRequest new];
     uploadRequest.bucket = self.stream.bucketName;
     uploadRequest.key = key;
     uploadRequest.body = data;
 //    uploadRequest.ACL = AWSS3ObjectCannedACLPublicRead;
     uploadRequest.cacheControl = @"max-age=0";
     uploadRequest.contentLength = @(data.length);
-    
+
     DDLogDebug(@"Queueing manifest... %@", manifestName);
     
-    NSLog(@"%@", self.s3.description);
     
     [[self.s3 putObject:uploadRequest] continueWithBlock:^id(BFTask *task) {
         if (task.error) {
             [self s3RequestFailedForFileName:manifestName withError:task.error];
+            NSLog(@"Manifest failed");
         } else {
             [self s3RequestCompletedForFileName:manifestName];
+            NSLog(@"Manifest Succeeded: %@", manifestName);
         }
         return nil;
     }];
@@ -335,7 +329,7 @@ static NSString * const kKFS3Key = @"kKFS3Key";
         ssl = @"s";
     }
     NSString *urlString = [NSString stringWithFormat:@"http%@://%@.s3.amazonaws.com/%@", ssl, self.stream.bucketName, key];
-    NSLog(@"%@", urlString);
+//    NSLog(@"%@", urlString);
     return [NSURL URLWithString:urlString];
 }
 
@@ -452,7 +446,7 @@ static NSString * const kKFS3Key = @"kKFS3Key";
 {
     dispatch_async(_scanningQueue, ^{
         [_files setObject:kUploadStateQueued forKey:fileName];
-        NSLog(@"Failed to upload request, requeuing %@: %@", fileName, error.description);
+//        NSLog(@"Failed to upload request, requeuing %@: %@", fileName, error.description);
         DDLogError(@"Failed to upload request, requeuing %@: %@", fileName, error.description);
         [self uploadNextSegment];
     });

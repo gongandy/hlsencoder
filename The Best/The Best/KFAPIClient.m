@@ -334,16 +334,17 @@ static NSString* const kKFAPIClientErrorDomain = @"kKFAPIClientErrorDomain";
 
 - (void) stopStream:(KFStream *)stream callbackBlock:(void (^)(BOOL, NSError *))callbackBlock {
     NSAssert(stream != nil, @"stream cannot be nil!");
-    [self betterPostPath:@"stream/stop" parameters:@{@"stream_id": stream.streamID} callbackBlock:^(NSDictionary *responseDictionary, NSError *error) {
-        if (!callbackBlock) {
-            return;
-        }
-        if (error) {
-            callbackBlock(NO, error);
-        } else {
-            callbackBlock(YES, nil);
-        }
-    }];
+    callbackBlock(YES, nil);
+//    [self betterPostPath:@"stream/stop" parameters:@{@"stream_id": stream.streamID} callbackBlock:^(NSDictionary *responseDictionary, NSError *error) {
+//        if (!callbackBlock) {
+//            return;
+//        }
+//        if (error) {
+//            callbackBlock(NO, error);
+//        } else {
+//            callbackBlock(YES, nil);
+//        }
+//    }];
 }
 
 - (void) startStreamWithParameters:(NSDictionary*)parameters callbackBlock:(void (^)(KFStream *, NSError *))endpointCallback {
